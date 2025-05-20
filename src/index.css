@@ -22,6 +22,7 @@ cd{
   --color-NavBg:#f3e6fb;
   --color-NavBg:#eaf4ff;
   --color-NavBg:#e0f7ff;
+  --color-NavBg:#f5e8ff;
 
   /* toogle */
   --color-ToggleKnob:#6b0355ad;
@@ -74,7 +75,9 @@ cd{
   --color-input-disabled-text: #7f8c8d;
   
   /* Link */
-  --color-link: var(--color-brand);
+  --color-link: #6b0355ad;
+  --color-link: #6a3d9e ;
+  --color-link: #5c2d91  ;
   --color-link-hover: var(--color-brand-hover);
   
   
@@ -98,8 +101,7 @@ cd{
   --color-dark-surface: #2d2d2d;
 
     /* Navbar  */
-  --color-NavDarkBg:#2a2540;
-  /* --color-NavDarkBg:#2c1a3c; */
+  --color-NavDarkBg:#0d0d0da5 ;
 
   /* toogle */
   --color-darkToggleKnob:#f5e8ff;
@@ -145,8 +147,8 @@ cd{
 
 
   /* Link */
-  --color-dark-link: #6c5ce7;
-  --color-dark-link-hover: #00c9a7;
+  --color-dark-link: #dc74fce4;
+  --color-dark-link-hover: #e4a9f6e4;
 
   /* border */
   --color-dark-border: rgba(255, 255, 255, 0.1);
@@ -160,22 +162,37 @@ cd{
 
 
   /* FONT FAMILY */
-  --font-AlexBrush: 'Alex Brush', 'cursive';
-  --font-Inter: 'Inter', 'sans-serif';
-  --font-Lato: 'Lato', 'sans-serif';
-  --font-Neonderthaw: 'Neonderthaw', 'cursive';
-  --font-Nunito: 'Nunito', 'sans-serif';
-  --font-OpenSans: 'Open Sans', 'sans-serif';
-  --font-Parisienne: 'Parisienne', 'cursive';
-  --font-Poppins: 'Poppins', 'sans-serif';
-  --font-Raleway: 'Raleway', 'sans-serif';
-  --font-RobotoMono: 'Roboto Mono', 'monospace';
-  --font-Roboto: 'Roboto', 'sans-serif';
-  --font-SairaStencilOne: 'Saira Stencil One', 'cursive';
+  --font-AlexBrush:  "Alex Brush", cursive;
+  --font-Inter: "Inter", sans-serif;
+  --font-Lato: "Lato", sans-serif;
+  --font-Neonderthaw:  "Neonderthaw", cursive;
+  --font-Nunito: "Nunito", sans-serif;
+  --font-OpenSans: "Open Sans", sans-serif;
+  --font-Parisienne: "Parisienne", cursive;
+  --font-Poppins: "Poppins", sans-serif;
+  --font-Raleway: "Raleway", sans-serif;
+  --font-RobotoMono: "Roboto Mono", monospace;
+  --font-Roboto: "Roboto", sans-serif;
+  --font-SairaStencilOne: "Saira Stencil One", sans-serif;
+
+
+  --animate-underlineExpand:underlineExpand 0.6s ease-in forwards;
+  @keyframes underlineExpand {
+     0% {
+      transform: scaleX(0);
+      transform-origin: left
+    }
+    50% {
+      transform: scaleX(1);
+      transform-origin: left
+
+    }
+    
+  }
 
 }
 
 c{
-  color:#9d84aa;
+  color:#0d0d0da5
 
 }
