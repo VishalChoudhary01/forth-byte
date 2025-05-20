@@ -1,11 +1,10 @@
-import React from 'react'
 import Navbar from '../components/moleclues/Navbar'
 import Footer from '../components/moleclues/Footer'
 import Sidebar from '../components/moleclues/Sidebar'
 
 const MainLayout = ({children}) => {
   return (
-    <div className='w-full h-screen flex flex-col dark:bg-dark-background bg-background transition-all duration-500'>
+    <div className='w-full h-screen flex flex-col  dark:bg-dark-background md:bg-background  transition-all duration-500'>
         <Navbar />
         {/* Mobile */}
         <Sidebar />

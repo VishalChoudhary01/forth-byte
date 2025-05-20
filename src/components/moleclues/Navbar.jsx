@@ -4,7 +4,7 @@ import { NavLink } from 'react-router'
 import Toggle from '../atoms/Toggle'
 const Navbar = () => {
   return (
-    <nav className='w-full lg:py-2.5 py-2 lg:text-[1.12rem] md:text-[1.1rem] lg:px-8 md:px-5 px-3 bg-NavBg fixed z-40 backdrop-blur-md dark:bg-NavDarkBg text-heading1 dark:text-dark-heading1 transition-all duration-400   flex items-center justify-between'>
+    <nav className='md:w-full md:h-14 w-full h-16 lg:py-2.5 py-2  lg:px-8 md:px-5 px-3   bg-NavBg fixed z-40 backdrop-blur-md dark:bg-NavDarkBg text-heading1 dark:text-dark-heading1 transition-all duration-300   flex items-center justify-between'>
       <Logo/>
       <ul className='md:flex hidden xl:gap-x-9  lg:gap-x-8 md:gap-x-6'>
         {
@@ -13,7 +13,7 @@ const Navbar = () => {
               to={menu.path}
               key={indx}
               className={({ isActive }) => 
-  `relative pb-1 transition-all duration-300 font-Raleway hover:scale-105
+  `relative pb-1 transition-all duration-300 font-Raleway hover:scale-105 lg:text-[1.05rem] md:text-[0.9rem] 
    hover:text-link-hover hover:dark:text-dark-link-hover
    ${
      isActive 
