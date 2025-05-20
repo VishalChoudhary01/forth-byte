@@ -1,0 +1,181 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Neonderthaw&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Parisienne&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Saira+Stencil+One&display=swap');
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+cd{
+  color:#6b0355ad
+}
+@theme{
+/* Light Theme (Default) */
+  --color-background: #f8f9fa;
+  --color-surface: #ffffff;
+
+  /* Brand color */
+  --color-brand: #af5cf7;
+  --color-brand-hover: #994ae3;
+  --color-brand-focus: #c88bfa;
+  --color-brand-contrast: #ffffff;
+
+    /* Navbar  */
+  --color-NavBg:#f3e6fb;
+  --color-NavBg:#eaf4ff;
+  --color-NavBg:#e0f7ff;
+
+  /* toogle */
+  --color-ToggleKnob:#6b0355ad;
+  --color-ToggleBg:#f8bbd0 ;
+  --color-ToggleBg2:#e1bee7 ;
+  --color-ToggleBg3:#81d4fa  ;
+
+  /* Footer */
+
+
+  
+
+  /* card */
+  --color-card-bg: var(--color-surface);
+
+  /* glass */
+  --color-glass-bg: rgba(255, 255, 255, 0.85);
+  
+  /* Heading */
+  --color-heading1: #2d3436;
+  --color-heading2: #4a4a4a;
+  --color-heading3: #5e5e5e;
+  --color-subheading1: #636e72;
+  --color-subheading2: #7f8c8d;
+
+  /* Paragraphs */
+  --color-paragraph: #2d3436;
+  --color-paragraph2: #57606f;
+  --color-paragraph3: #747d8c;
+  
+--color-accent: var(--color-brand);
+--color-dark-accent: var(--color-dark-brand);
+
+
+
+  /* Button */
+  --color-button-bg: var(--color-brand);
+  --color-button-text: var(--color-brand-contrast);
+  --color-button-hover: var(--color-brand-hover);
+  --color-button-disabled-bg: #bdc3c7;   
+  --color-button-disabled-text: #7f8c8d;
+
+   /* Input Fields - Light Theme */
+  --color-input-bg: #ffffff;
+  --color-input-text: #2d3436;
+  --color-input-placeholder: #b2bec3;
+  --color-input-border: rgba(0, 0, 0, 0.2);
+  --color-input-focus-border: #0984e3;
+  --color-input-disabled-bg: #ecf0f1;
+  --color-input-disabled-text: #7f8c8d;
+  
+  /* Link */
+  --color-link: var(--color-brand);
+  --color-link-hover: var(--color-brand-hover);
+  
+  
+  /* Borders & Lines */
+  --color-border: rgba(0, 0, 0, 0.1);
+  --color-hr-line: rgba(0, 0, 0, 0.08);
+  
+  /* Shadows */
+  --color-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --color-text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+
+  
+
+  /* Dark Theme  */
+  --color-dark-brand: #af5cf7;
+  --color-dark-brand-hover: #c88bfa;
+  --color-dark-brand-focus: #994ae3;
+  --color-dark-brand-contrast: #ffffff;
+
+  --color-dark-background: #1a1a1a;
+  --color-dark-surface: #2d2d2d;
+
+    /* Navbar  */
+  --color-NavDarkBg:#2a2540;
+  /* --color-NavDarkBg:#2c1a3c; */
+
+  /* toogle */
+  --color-darkToggleKnob:#f5e8ff;
+  --color-darkToggleBg:#9d84aa;
+
+
+  /* Footer */
+
+
+  /* card */
+  --color-dark-card-bg: var(--color-dark-surface);
+
+  /* glass */
+  --color-dark-glass-bg: rgba(32, 32, 32, 0.7);
+
+        /* Heading  */
+  --color-dark-heading1: #ffffff;
+  --color-dark-heading2: #e0e0e0;
+  --color-dark-heading3: #c0c0c0;
+  --color-dark-subheading1: #b0b0b0;
+  --color-dark-subheading2: #909090;
+
+  /* Paragraph */
+  --color-dark-paragraph: #d0d0d0;
+  --color-dark-paragraph2: #a0a0a0;
+  --color-dark-paragraph3: #8f8f8f;
+
+  /* Button */
+  --color-dark-button-bg: var(--color-dark-brand);
+  --color-dark-button-text: var(--color-dark-brand-contrast);
+  --color-dark-button-hover: var(--color-dark-brand-hover);
+  --color-dark-button-disabled-bg: #404040;  
+  --color-dark-button-disabled-text: #6b6b6b; 
+
+  /* Input Fields - Dark Theme */
+  --color-dark-input-bg: #2d2d2d;
+  --color-dark-input-text: #d0d0d0;
+  --color-dark-input-placeholder: #888888;
+  --color-dark-input-border: rgba(255, 255, 255, 0.15);
+  --color-dark-input-focus-border: #6c5ce7;
+  --color-dark-input-disabled-bg: #1e1e1e;
+  --color-dark-input-disabled-text: #6b6b6b;
+
+
+  /* Link */
+  --color-dark-link: #6c5ce7;
+  --color-dark-link-hover: #00c9a7;
+
+  /* border */
+  --color-dark-border: rgba(255, 255, 255, 0.1);
+
+  /* horizontal line */
+  --color-dark-hr-line: rgba(255, 255, 255, 0.08);
+
+  /* shadow */
+  --color-dark-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+  --color-dark-text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+
+
+  /* FONT FAMILY */
+  --font-AlexBrush: 'Alex Brush', 'cursive';
+  --font-Inter: 'Inter', 'sans-serif';
+  --font-Lato: 'Lato', 'sans-serif';
+  --font-Neonderthaw: 'Neonderthaw', 'cursive';
+  --font-Nunito: 'Nunito', 'sans-serif';
+  --font-OpenSans: 'Open Sans', 'sans-serif';
+  --font-Parisienne: 'Parisienne', 'cursive';
+  --font-Poppins: 'Poppins', 'sans-serif';
+  --font-Raleway: 'Raleway', 'sans-serif';
+  --font-RobotoMono: 'Roboto Mono', 'monospace';
+  --font-Roboto: 'Roboto', 'sans-serif';
+  --font-SairaStencilOne: 'Saira Stencil One', 'cursive';
+
+}
+
+c{
+  color:#9d84aa;
+
+}
