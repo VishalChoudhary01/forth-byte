@@ -6,96 +6,73 @@ const UnavailablePage = () => {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 0.6 }}
-      className="min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 flex items-center justify-center px-4 py-12"
+      transition={{ duration: 0.5 }}
+      className="min-h-screen bg-background dark:bg-dark-background flex items-center justify-center px-4 py-8"
     >
-      <div className="max-w-4xl w-full relative overflow-hidden">
-        {/* Animated construction elements */}
+      <div className="max-w-2xl w-full relative">
+        {/* Animated elements (subtle on mobile) */}
         <motion.div
           animate={{ rotate: 360 }}
-          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-          className="absolute -top-20 -right-20 opacity-10"
+          transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
+          className="absolute -top-16 -right-16 opacity-10 md:opacity-20 hidden sm:block"
         >
-          <FaTools className="text-amber-400 w-40 h-40" />
-        </motion.div>
-
-        <motion.div
-          animate={{ y: [-10, 10, -10] }}
-          transition={{ duration: 3, repeat: Infinity }}
-          className="absolute top-1/4 left-10 opacity-15"
-        >
-          <FaHammer className="text-red-500 w-24 h-24 -rotate-45" />
+          <FaTools className="text-brand w-28 h-28 dark:text-dark-brand" />
         </motion.div>
 
         {/* Main Content */}
-        <div className="relative z-10 bg-gray-900/80 backdrop-blur-lg rounded-2xl p-8 sm:p-12 lg:p-16 border border-gray-700/50 shadow-2xl">
-          <div className="flex flex-col items-center text-center">
-            {/* Pulsing Warning Icon */}
+        <div className="relative z-10 bg-glass-bg dark:bg-dark-glass-bg backdrop-blur-lg rounded-xl p-6 md:p-8 border border-border dark:border-dark-border shadow-md">
+          <div className="flex flex-col items-center text-center space-y-5">
+            {/* Warning Icon */}
             <motion.div
-              animate={{ scale: [1, 1.2, 1] }}
-              transition={{ duration: 2, repeat: Infinity }}
-              className="mb-8 text-red-500"
+              animate={{ scale: [1, 1.1, 1] }}
+              transition={{ duration: 2.5, repeat: Infinity }}
+              className="text-brand dark:text-dark-brand mb-3"
             >
-              <FaExclamationTriangle className="w-20 h-20" />
+              <FaExclamationTriangle className="w-12 h-12 md:w-14 md:h-14" />
             </motion.div>
 
-            <motion.h1
-              initial={{ y: -50, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold mb-6 bg-gradient-to-r from-amber-400 to-red-500 bg-clip-text text-transparent"
-            >
-              Under Construction
-            </motion.h1>
+            <h1 className="text-3xl md:text-4xl font-semibold text-heading1 dark:text-dark-heading1 mb-3">
+              <span className="bg-gradient-to-r from-brand to-brand-hover bg-clip-text text-transparent">
+                Under Construction
+              </span>
+            </h1>
 
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.3 }}
-              className="text-gray-300 text-lg md:text-xl mb-8 max-w-3xl mx-auto leading-relaxed"
-            >
-              Whoops! It seems you've discovered our digital construction zone. 
-              Our team is working hard to build something amazing here. 
-              Please check back soon while we hammer out the final details!
-            </motion.p>
+            <p className="text-paragraph dark:text-dark-paragraph text-sm md:text-base leading-relaxed max-w-md mx-auto mb-5">
+              Our team is currently working on this section. Please check back soon 
+              while we finalize the experience. Thank you for your patience.
+            </p>
 
             {/* Progress Indicator */}
-            <div className="w-full max-w-xs sm:max-w-sm mb-12">
-              <div className="h-3 bg-gray-700 rounded-full mb-2 overflow-hidden">
+            <div className="w-full max-w-xs mb-6">
+              <div className="h-2 bg-surface dark:bg-dark-surface rounded-full overflow-hidden">
                 <motion.div
                   initial={{ width: "0%" }}
                   animate={{ width: "65%" }}
-                  transition={{ duration: 2, repeat: Infinity }}
-                  className="h-full bg-gradient-to-r from-amber-400 to-red-500"
+                  transition={{ duration: 2, ease: "easeInOut" }}
+                  className="h-full bg-gradient-to-r from-brand to-brand-hover"
                 />
               </div>
-              <span className="text-sm text-amber-400">Construction Progress: 65%</span>
+              <div className="flex justify-between text-xs mt-1.5">
+                <span className="text-brand dark:text-dark-brand">65% Complete</span>
+                <span className="text-paragraph3 dark:text-dark-paragraph3">Est. Sept 2025</span>
+              </div>
             </div>
 
-            {/* Action Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 w-full justify-center">
-              <motion.a
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                href="/"
-                className="flex-1 max-w-xs sm:max-w-none flex items-center justify-center gap-3 bg-gradient-to-r from-amber-500 to-red-600 hover:from-amber-400 hover:to-red-500 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 text-lg"
-              >
-                <FaRocket className="flex-shrink-0" />
-                Back to Safety
-              </motion.a>
-            </div>
-
-            {/* Status Message */}
-            <div className="mt-8 p-4 bg-gray-800/50 rounded-lg border border-amber-400/20">
-              <p className="text-sm text-amber-300 flex items-center gap-2">
-                <FaExclamationTriangle className="flex-shrink-0" />
-                Expected completion: September 2024
-              </p>
-            </div>
+            {/* Action Button */}
+            <motion.a
+              whileHover={{ scale: 1.03 }}
+              whileTap={{ scale: 0.97 }}
+              href="/"
+              className="inline-flex items-center gap-2 bg-brand hover:bg-brand-hover text-brand-contrast px-5 py-2.5 rounded-lg transition-colors duration-200 text-sm md:text-base"
+            >
+              <FaRocket className="shrink-0" />
+              Return to Homepage
+            </motion.a>
           </div>
         </div>
 
-        {/* Grid Pattern */}
-        <div className="absolute inset-0 opacity-10 bg-[size:40px_40px] bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)]" />
+        {/* Subtle grid pattern */}
+        <div className="absolute inset-0 opacity-5 bg-[length:30px_30px] bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)]" />
       </div>
     </motion.div>
   );

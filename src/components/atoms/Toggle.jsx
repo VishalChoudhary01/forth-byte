@@ -1,17 +1,7 @@
-import React,{useEffect} from "react";
-import {toggleDarkMode} from "./../../redux/featuresSlice/themeSlice";
-import { useSelector,useDispatch } from "react-redux";
+import useTheme from "../../hooks/useTheme";
 const Toggle = () => {
-  const dispatch = useDispatch();
-  const darkMode = useSelector((state) => state.theme.DarkMode);
 
-  useEffect(() => {
-    document.documentElement.classList.toggle("dark", darkMode);
-  }, [darkMode]);
-
-  const handleDarkmode = () => {
-    dispatch(toggleDarkMode());
-  };
+const {darkMode,handleToggleTheme}=useTheme()
 
   return (
     <div className="flex items-center justify-center">
@@ -20,13 +10,13 @@ const Toggle = () => {
           className="peer sr-only"
           type="checkbox"
           checked={darkMode}
-          onChange={handleDarkmode}
+          onChange={handleToggleTheme}
         />
         <div
-          className="relative h-6 w-12 rounded-full 
+          className="relative md:h-6 md:w-12 w-10 h-5 rounded-full 
                      border-[var(--color-accent)] dark:border-[var(--color-dark-accent)]  
                      transition-all duration-300
-                     after:absolute after:left-0.5 after:top-0.5 after:h-5 after:w-5 
+                     after:absolute after:left-0.5 after:top-0.5 after:md:h-5 after:md:w-5 after:h-3.5 after:w-3.5 
                      after:rounded-full 
                      after:bg-ToggleKnob dark:after:bg-darkToggleKnob
                      after:shadow-[1px_1px_4px_rgba(0,0,0,0.3)] 
